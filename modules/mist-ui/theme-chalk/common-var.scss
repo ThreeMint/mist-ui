@@ -1,0 +1,52 @@
+//color
+$-color-white: #ffffff !default;
+$-color-white-light: mix($-color-white, $-color-white, 50%) !default;
+
+$-color-grey: #999999 !default;
+$-color-grey-light-1: lighten($-color-grey, 10%);
+$-color-grey-light-2: lighten($-color-grey, 20%);
+$-color-grey-light-3: lighten($-color-grey, 30%);
+$-color-grey-light-4: lighten($-color-grey, 40%);
+$-color-grey-light-5: lighten($-color-grey, 50%);
+$-color-grey-dark-1: darken($-color-grey, 10%);
+$-color-grey-dark-2: darken($-color-grey, 20%);
+$-color-grey-dark-3: darken($-color-grey, 30%);
+$-color-grey-dark-4: darken($-color-grey, 40%);
+$-color-grey-dark-5: darken($-color-grey, 50%);
+
+$-color-black: #000000 !default;
+$-color-black-light: mix($-color-white, $-color-black, 50%) !default;
+
+$-color-blue: #3ea4e7 !default;
+$-color-blue-light-1: mix($-color-white, $-color-blue, 10%) !default;
+$-color-blue-light-2: mix($-color-white, $-color-blue, 20%) !default;
+$-color-blue-light-3: mix($-color-white, $-color-blue, 30%) !default;
+$-color-blue-light-4: mix($-color-white, $-color-blue, 40%) !default;
+$-color-blue-light-5: mix($-color-white, $-color-blue, 50%) !default;
+$-color-blue-light-6: mix($-color-white, $-color-blue, 60%) !default;
+$-color-blue-light-7: mix($-color-white, $-color-blue, 70%) !default;
+$-color-blue-light-8: mix($-color-white, $-color-blue, 80%) !default;
+$-color-blue-light-9: mix($-color-white, $-color-blue, 90%) !default;
+
+$-color-default: #eeeeee !default;
+$-color-default-lighter: mix($-color-white, $-color-default, 20%) !default;
+
+$-color-primary: #3ea4e7 !default;
+$-color-primary-light:#7abeec !default;
+$-color-primary-lighter: mix($-color-white, $-color-primary, 20%) !default;
+$-color-primary-lighter-5: mix($-color-white, $-color-primary, 50%) !default;
+$-color-primary-lighter-9: mix($-color-white, $-color-primary, 90%) !default;
+
+$-color-success: #48ca48 !default;
+$-color-success-light:mix($-color-white, $-color-success, 40%) !default;
+$-color-success-lighter: mix($-color-white, $-color-success, 20%) !default;
+
+$-color-warning: #e7b616 !default;
+$-color-warning-light: mix($-color-white, $-color-warning, 40%) !default;
+$-color-warning-lighter: mix($-color-white, $-color-warning, 20%) !default;
+
+$-color-danger: #f15e5e !default;
+$-color-danger-light: mix($-color-white, $-color-danger, 40%) !default;
+
+// background
+$-color-background: #c6c6c6
