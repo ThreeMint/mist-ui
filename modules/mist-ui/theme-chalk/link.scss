@@ -1,0 +1,109 @@
+@mixin disable($disable-color) {
+  cursor: not-allowed;
+  color: $disable-color;
+}
+
+@mixin underline($underline-color) {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid $underline-color;
+}
+
+.mi-link {
+
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+
+  // &:hover {
+  //   text-decoration: none;
+  // }
+
+  &.mi-link--default {
+    color: $-color-black;
+
+    &:hover {
+      color: $-color-blue;
+    }
+
+    &.is-underline:hover::after {
+      @include underline($-color-blue);
+    }
+
+    &.is-disabled {
+      @include disable($-color-grey);
+    }
+  }
+
+  &.mi-link--primary {
+    color: $-color-primary;
+
+    &:hover {
+      color: $-color-primary-lighter;
+    }
+
+    &.is-underline:hover::after {
+      @include underline($-color-primary);
+    }
+
+    &.is-disabled {
+      @include disable($-color-primary-light);
+    }
+  }
+
+  &.mi-link--success {
+    color: $-color-success;
+
+    &:hover {
+      color: $-color-success-light;
+    }
+
+    &.is-underline:hover::after {
+      @include underline($-color-success);
+    }
+
+    &.is-disabled {
+      @include disable($-color-success-light);
+    }
+  }
+
+  &.mi-link--warning {
+    color: $-color-warning;
+
+    &:hover {
+      color: $-color-warning-light;
+    }
+
+    &.is-underline:hover::after {
+      @include underline($-color-warning);
+    }
+
+    &.is-disabled {
+      @include disable($-color-warning-lighter);
+    }
+  }
+
+  &.mi-link--danger {
+    color: $-color-danger;
+
+    &:hover {
+      color: $-color-danger-light;
+    }
+
+    &.is-underline:hover::after {
+      @include underline($-color-danger);
+    }
+
+    &.is-disabled {
+      @include disable($-color-danger-light);
+    }
+  }
+}
