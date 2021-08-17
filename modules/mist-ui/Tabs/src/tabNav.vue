@@ -22,28 +22,23 @@ export default {
     currentName: String,
   },
   data() {
-    return {
-      selectedItem: null,
-    };
+    return {};
   },
   watch: {
     currentName: {
-      immediate: true,
       handler() {
         this.$nextTick(() => {
-          setTimeout(() => {
-            this.$refs.itemsArray.forEach((item) => {
-              if (item.dataset.selected) {
-                const lineWidth = item.getBoundingClientRect().width;
-                this.$refs.indicatorLine.style.width = `${lineWidth}px`;
+          this.$refs.itemsArray.forEach((item) => {
+            if (item.dataset.selected) {
+              const lineWidth = item.getBoundingClientRect().width;
+              this.$refs.indicatorLine.style.width = `${lineWidth}px`;
 
-                const containerLeft =
-                  this.$refs.navRef.getBoundingClientRect().left;
-                const beSelectedNavLeft = item.getBoundingClientRect().left;
-                const indicatorLeft = beSelectedNavLeft - containerLeft;
-                this.$refs.indicatorLine.style.left = `${indicatorLeft}px`;
-              }
-            });
+              const containerLeft =
+                this.$refs.navRef.getBoundingClientRect().left;
+              const beSelectedNavLeft = item.getBoundingClientRect().left;
+              const indicatorLeft = beSelectedNavLeft - containerLeft;
+              this.$refs.indicatorLine.style.left = `${indicatorLeft}px`;
+            }
           });
         });
       },
@@ -53,21 +48,20 @@ export default {
     handleClick(e, name) {
       this.$emit("NavClick", e, name);
     },
-    initIndicatorWidth() {
-      this.$nextTick(() => {
-        setTimeout(() => {
-          this.$refs.itemsArray.forEach((item) => {
-            if (item.dataset.selected) {
-              let lineWidth = item.getBoundingClientRect().width;
-              this.$refs.indicatorLine.style.width = `${lineWidth}px`;
-            }
-          });
-        });
-      });
-    },
-  },
-  mounted() {
-    this.initIndicatorWidth();
+
+    // initIndicatorWidth() {
+    //   // 使用了v-for，在mounted阶段，dom无法通过refs获取
+    //   this.$nextTick(() => {
+    //     setTimeout(() => {
+    //       this.$refs.itemsArray.forEach((item) => {
+    //         if (item.dataset.selected) {
+    //           let lineWidth = item.getBoundingClientRect().width;
+    //           this.$refs.indicatorLine.style.width = `${lineWidth}px`;
+    //         }
+    //       });
+    //     });
+    //   });
+    // },
   },
 };
 </script>
