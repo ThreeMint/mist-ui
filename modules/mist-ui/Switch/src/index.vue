@@ -2,7 +2,7 @@
   <div
     class="mi-switch"
     :class="{ 'is-disabled': switchDisabled, 'is-checked': checked }"
-    @click.prevent="handleClick"
+    @click.prevent="handleClick($event)"
   >
     <span class="mi-switch__core" ref="core"></span>
   </div>
@@ -45,12 +45,10 @@ export default {
     },
   },
   methods: {
-    handleClick: function () {
+    handleClick: function (e) {
       if (!this.switchDisabled) {
-        //  修改props传的值，并同步父组件的入参
-        this.$emit("update:value", !this.checked);
-        //  发送 change 事件click
-        this.$emit("change", !this.checked);
+        this.$emit("input", !this.checked);
+        this.$emit("change", !this.checked, e);
       }
     },
     setBackgroundColor: function () {

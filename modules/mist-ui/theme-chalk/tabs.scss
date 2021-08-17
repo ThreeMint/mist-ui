@@ -1,0 +1,42 @@
+.mi-tabs {
+  display: flex;
+  flex-direction: column;
+
+  .mi-tabs_header {
+    div {
+      position: relative;
+      display: flex;
+      flex-wrap: nowrap;
+      text-align: center;
+      border-bottom: 2px solid #eee;
+
+      .mi-nav_item {
+        cursor: pointer;
+        display: flex;
+        position: relative;
+        align-items: center;
+        border-bottom: none;
+        background-color: white;
+        padding: 10px 20px;
+        transition: all 0.2s;
+
+        &:hover,
+        &.active {
+          color: $-color-primary;
+        }
+      }
+
+      .mi-tab_indicator {
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        border-bottom: 2px solid $-color-primary;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .mi-tabs_content {
+    padding: 10px 20px;
+  }
+}

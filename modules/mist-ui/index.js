@@ -1,13 +1,15 @@
 import MistButton from './Button/index.js';
 import MistLink from './Link/index.js';
 import MistSwitch from './Switch/index.js';
+import MistTabs from './Tabs/index.js';
+import MistTabPane from './Tab-pane/index'
 
 const MistUI = {};
 
 // element采用的导出方法之一
-const COMPONENTS = [MistButton,MistLink,MistSwitch];
+const COMPONENTS = [MistButton,MistLink,MistSwitch,MistTabs,MistTabPane];
   
-
+// Vue.use()会调用定义插件的install方法
 MistUI.install = function (Vue, options) {
 
   if (options && options.components) {
@@ -42,4 +44,6 @@ export default MistUI;
  */
 // const MistButton = {};
 // MistButton.install = Vue => Vue.component(Button.name, Button);
-export {MistButton,MistLink,MistSwitch}
+export {
+  MistButton, MistLink, MistSwitch, MistTabs,MistTabPane
+}

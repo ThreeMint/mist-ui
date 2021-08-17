@@ -18,7 +18,7 @@
       <br />
       <mist-button :loading="true">加载中</mist-button>
     </div>
-    <!-- <hr /> -->
+
     <h2>link链接</h2>
     <div class="link">
       <h3>默认</h3>
@@ -31,14 +31,27 @@
 
     <h2>Switch链接</h2>
     <div class="switch">
+      <mist-switch v-model="outValue" @change="switchClick"></mist-switch>
       <mist-switch
         disabled
-        :value.sync="outValue"
+        v-model="outValue"
         active-color="#ff0000"
         inactive-color="#000000"
         @change="switchClick"
       ></mist-switch>
     </div>
+
+    <br />
+    <mi-tabs v-model="currentName" class="tabs">
+      <!-- 无效的 -->
+      <div label="选项ssssssss" name="ss">ssss</div>
+      <span>sssss222</span>
+
+      <mi-tab-pane label="选项一" name="first">选项一2</mi-tab-pane>
+      <mi-tab-pane label="选项二" name="two">选项二33</mi-tab-pane>
+      <mi-tab-pane label="选项三sab" name="three">选项三4444</mi-tab-pane>
+      <mi-tab-pane label="选项su" name="f">选项四555</mi-tab-pane>
+    </mi-tabs>
   </div>
 </template>
 
@@ -51,6 +64,8 @@ export default {
       load: false,
       //switch
       outValue: true,
+      // tabs
+      currentName: "first",
     };
   },
   methods: {
@@ -64,6 +79,7 @@ export default {
 <style lang="scss">
 #app {
   .button {
+    // display: flex;
     button {
       margin-left: 5px;
       margin-bottom: 5px;
@@ -74,7 +90,10 @@ export default {
   .switch {
     border: 1px solid #999;
     overflow: scroll;
-    height: 300px;
+    height: 100px;
+  }
+  .tabs {
+    // width: 400px;
   }
 }
 </style>
