@@ -5,6 +5,7 @@
         :nav_options="nav_options"
         :currentName="value"
         @NavClick="handleNavClick"
+        ref="nav"
       ></mi-tab-nav>
     </div>
     <div class="mi-tabs_content">
@@ -71,10 +72,23 @@ export default {
     initSeleced() {
       this.layer((item) => (item.showItem = item.name == this.value));
     },
+
+    initIndicatorWidth() {
+      // 父级操作子组件
+      this.$nextTick(() => {
+        this.$refs.nav.$refs.itemsArray.forEach((item) => {
+          if (item.dataset.selected) {
+            const lineWidth = item.getBoundingClientRect().width;
+            this.$refs.nav.$refs.indicatorLine.style.width = `${lineWidth}px`;
+          }
+        });
+      });
+    },
   },
   mounted() {
     this.initNav();
     this.initSeleced();
+    this.initIndicatorWidth();
   },
 };
 </script>
