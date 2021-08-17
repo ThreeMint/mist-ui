@@ -2,7 +2,10 @@
 node_modules
 docs
 
-package-lock.json
+.gitgnore
+balel.config.js
+package.json
+vue.config.js
 
 # local env files
 .env.local
