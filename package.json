@@ -1,12 +1,20 @@
 {
-  "name": "mistui",
+  "name": "mist-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "author": "Mist Xu",
+  "main":"lib/mist-ui.umd.min.js",
+  "files": [
+    "lib",
+    "modules/mist-ui/"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "lib": "vue-cli-service build --target lib --name mist-ui --dest lib modules/mist-ui/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

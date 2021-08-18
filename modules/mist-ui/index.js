@@ -3,6 +3,8 @@ import MistLink from './Link/index.js';
 import MistSwitch from './Switch/index.js';
 import MistTabs from './Tabs/index.js';
 import MistTabPane from './Tab-pane/index'
+// 打包为库文件需要引入
+import './theme-chalk/index.scss'
 
 const MistUI = {};
 
