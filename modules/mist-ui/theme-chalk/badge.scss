@@ -1,0 +1,54 @@
+.mi-badge {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.mi-badge__content {
+  background-color: #f56c6c;
+  border-radius: 10px;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 6px;
+  text-align: center;
+  white-space: nowrap;
+  border: 1px solid #fff;
+
+  &.is-fixed {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    transform: translateY(-50%) translateX(100%);
+
+    &.is-dot {
+      right: 5px;
+    }
+  }
+
+  &.is-dot {
+    height: 8px;
+    width: 8px;
+    padding: 0;
+    right: 0;
+    border-radius: 50%;
+  }
+}
+
+.mi-badge__content--primary {
+  background-color: $-color-primary;
+}
+
+.mi-badge__content--success {
+  background-color: $-color-success;
+}
+
+.mi-badge__content--warning {
+  background-color: $-color-warning;
+}
+
+.mi-badge__content--danger {
+  background-color: $-color-danger;
+}
