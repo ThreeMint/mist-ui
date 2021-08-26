@@ -35,6 +35,11 @@
         </mist-badge>
       </mist-collapse-item>
     </mist-collapse>
+
+    <mi-tabs v-model="currentName" class="tabs" @change="tabsHandle">
+      <mi-tab-pane label="选项一" name="first">选项一2</mi-tab-pane>
+      <mi-tab-pane label="选项二" name="two">选项二33</mi-tab-pane>
+    </mi-tabs>
   </div>
 </template>
 
@@ -49,15 +54,19 @@ export default {
       outValue: true,
       // tabs
       currentName: "first",
-      collapseValue: "",
+      collapseValue: "button 按钮",
     };
   },
   methods: {
+    tabsHandle(val) {
+      console.log(val);
+    },
     switchClick(val) {
       console.log(val);
     },
     handleChange(val) {
       console.log("使用时触发，", val);
+      console.log("v-model,", this.collapseValue);
     },
   },
 };
@@ -65,10 +74,10 @@ export default {
 
 <style lang="scss">
 #app {
-  button {
-    // margin-right: 5px;
-    // margin-bottom: 5px;
-  }
+  // button {
+  //   margin-right: 5px;
+  //   margin-bottom: 5px;
+  // }
 
   .button,
   .link,

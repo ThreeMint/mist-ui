@@ -39,6 +39,7 @@ export default {
   methods: {
     handleNavClick(e, navCurrentName) {
       this.$emit("input", navCurrentName);
+      this.$emit("change", navCurrentName);
       // 这里的更改选择项需要用 宏任务, 否则测试的时候有显示不正确的bug
       setTimeout(() => this.initSeleced(), 0);
     },

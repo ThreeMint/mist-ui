@@ -7,10 +7,28 @@
 <script>
 export default {
   name: "MistCollapse",
+  props: {
+    value: {
+      type: [String, Number],
+      default: "",
+    },
+  },
+  data() {
+    return {
+      activeTitle: this.value,
+    };
+  },
+  watch: {
+    value(newVal) {
+      this.activeTitle = newVal;
+    },
+  },
   methods: {
     handleChange(val) {
-      this.$emit("change", val);
-      this.$emit("input", val);
+      let value = val;
+      //注意顺序
+      this.$emit("input", value);
+      this.$emit("change", value);
     },
   },
   created() {
