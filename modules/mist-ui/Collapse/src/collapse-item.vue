@@ -21,7 +21,7 @@ export default {
   name: "MistCollapseItem",
   props: {
     title: {
-      type: String,
+      type: [String, Number],
     },
   },
   data() {

@@ -35,7 +35,8 @@
       v-model="collapseValue"
     >
       <mist-collapse-item title="标题 1">
-        exercitationem aspernatur, porro quae esse explicabo neque qui quidem!
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
         <mist-button>submit</mist-button>
       </mist-collapse-item>
 
