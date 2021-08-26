@@ -1,0 +1,74 @@
+.mi-collapse {
+  border-top: 1px solid $-color-grey-light-1;
+  border-bottom: 1px solid $-color-grey-light-1;
+
+  .mi-collapse-item {
+    overflow: hidden;
+
+    &:last-child {
+      margin-bottom: -1px;
+
+      .mi-collapse_header {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  .mi-collapse_header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid $-color-grey-light-1;
+    cursor: pointer;
+    align-items: center;
+    outline: none;
+    transition: border-bottom-color 0.3s;
+
+    &.is-active {
+      border-bottom-color: transparent;
+    }
+  }
+
+  .mi-collapse_content {
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid $-color-grey-light-1;
+  }
+
+  .mi-collapse__icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    transform-origin: center;
+    transform: translateY(-50%);
+    line-height: 0;
+    font-size: 0;
+    border: 5px solid transparent;
+    border-left-color: $-color-grey-light-1;
+
+    transition: transform 0.3s linear;
+
+    &.is-active {
+      transform: rotateZ(90deg);
+    }
+  }
+
+  .mifade-enter-active,
+  .mifade-leave-active {
+    transition: opacity 0.3s, height 0.3s, padding-top 0.5s, padding-bottom 0.5s;
+  }
+
+  .mifade-enter {
+    opacity: 0;
+  }
+
+  .mifade-leave-to {
+    opacity: 0;
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom-color: transparent;
+  }
+}
