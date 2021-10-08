@@ -3,6 +3,7 @@ import MistBadge from './Badge/index';
 import MistCollapse from './Collapse/index';
 import MistCollapseItem from './CollapseItem/index';
 import MistLink from './Link/index.js';
+import MistRate from './Rate/index.js';
 import MistSwitch from './Switch/index.js';
 import MistTabs from './Tabs/index.js';
 import MistTabPane from './Tab-pane/index'
@@ -17,14 +18,15 @@ const COMPONENTS = [
   MistCollapse, MistCollapseItem,
   MistLink, MistSwitch,
   MistTabs, MistTabPane,
+  MistRate
 ];
-  
+
 // Vue.use()会调用定义插件的install方法
 MistUI.install = function (Vue, options) {
 
   if (options && options.components) {
     const comps = options.components;
-    
+
     comps.forEach((componentName) => {
       COMPONENTS.forEach((component) => {
         if (componentName === component.name) {
@@ -59,4 +61,5 @@ export {
   MistCollapse, MistCollapseItem,
   MistLink, MistSwitch,
   MistTabs, MistTabPane,
+  MistRate
 }

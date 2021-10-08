@@ -49,4 +49,11 @@ $-color-danger: #f15e5e !default;
 $-color-danger-light: mix($-color-white, $-color-danger, 40%) !default;
 $-color-danger-lighter: mix($-color-white, $-color-danger, 20%) !default;
 // background
-$-color-background: #c6c6c6
+$-color-background: #c6c6c6;
+
+// Rate
+$-color-rate-low: #f5b326;
+$-color-rate-lighter: mix($-color-white, $-color-rate-low, 30%) !default;
+$--rate-icon-size: 18px !default;
+$--rate-icon-margin: 6px !default;
+$--rate-height: 20px !default;

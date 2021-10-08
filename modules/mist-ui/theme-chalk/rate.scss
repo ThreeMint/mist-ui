@@ -1,0 +1,40 @@
+@import './common-var.scss';
+
+.mi-rate {
+  height: $--rate-height;
+  line-height: 1;
+}
+
+.mi-rate-item {
+  height: $--rate-height;
+  line-height: 1;
+  vertical-align: middle;
+
+  .mi-icon-star {
+    position: relative;
+    font-size: $--rate-icon-size;
+    margin-right: $--rate-icon-margin;
+    transition: .3s;
+
+    .mi-icon-star-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $-color-rate-low;
+    }
+  }
+
+  [class*=" hover"] {
+    transform: scale(1.15);
+
+    .mi-icon-star-fill {
+      color: $-color-rate-lighter;
+    }
+  }
+}
+
+.mi-rate-text {
+  font-size: 14px;
+  height: $--rate-height;
+  vertical-align: middle;
+}

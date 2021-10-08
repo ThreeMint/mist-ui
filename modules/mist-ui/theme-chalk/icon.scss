@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "mist-icons";
+  /* Project id  */
+  src: url('fonts/iconfont.ttf') format('truetype');
+}
+
+[class^="mi-icon-"],
+[class*=" mi-icon-"] {
+  font-family: "mist-icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mi-icon-star:before {
+  content: "\e7df";
+}
+
+.mi-icon-star-fill:before {
+  content: "\e86a";
+}
