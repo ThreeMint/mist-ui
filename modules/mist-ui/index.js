@@ -8,7 +8,7 @@ import MistSwitch from './Switch/index.js';
 import MistTabs from './Tabs/index.js';
 import MistTabPane from './Tab-pane/index'
 // 打包为库文件需要引入
-import './theme-chalk/index.scss'
+// import './theme-chalk/index.scss'
 
 const MistUI = {};
 
@@ -44,16 +44,8 @@ MistUI.install = function (Vue, options) {
 export default MistUI;
 
 // element采用的导出方法之一
-// 这里可以把每个组件的install抽离到单个文件中
-/* 例：
- *  - Button
-      - index.vue
-      - index.js
-    - Input
-      - index.vue
-      - index.js
- * 
- */
+// 把每个组件的install抽离到单个文件中
+
 // const MistButton = {};
 // MistButton.install = Vue => Vue.component(Button.name, Button);
 export {

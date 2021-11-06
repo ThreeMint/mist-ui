@@ -2,6 +2,7 @@
 node_modules
 docs
 lib
+dist
 package-lock.json
 .npmignore
 
