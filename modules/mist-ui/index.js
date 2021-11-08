@@ -1,5 +1,6 @@
 import MistButton from './Button/index.js';
 import MistBadge from './Badge/index';
+import MistCard from './Card/index';
 import MistCollapse from './Collapse/index';
 import MistCollapseItem from './CollapseItem/index';
 import MistLink from './Link/index.js';
@@ -14,7 +15,7 @@ const MistUI = {};
 
 // element采用的导出方法之一
 const COMPONENTS = [
-  MistButton, MistBadge,
+  MistButton, MistBadge, MistCard,
   MistCollapse, MistCollapseItem,
   MistLink, MistSwitch,
   MistTabs, MistTabPane,
@@ -49,7 +50,7 @@ export default MistUI;
 // const MistButton = {};
 // MistButton.install = Vue => Vue.component(Button.name, Button);
 export {
-  MistButton, MistBadge,
+  MistButton, MistBadge, MistCard,
   MistCollapse, MistCollapseItem,
   MistLink, MistSwitch,
   MistTabs, MistTabPane,

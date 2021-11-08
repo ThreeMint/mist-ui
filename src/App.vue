@@ -43,6 +43,17 @@
       score-template="值为：{value}"
       score-color="#0fb5d0"
     ></mist-rate>
+    <br />
+
+    <mist-card style="width: 480px">
+      <template v-slot:header>
+        <span>sssssss</span>
+        <mist-button type="default" size="mini">按钮</mist-button>
+      </template>
+      <div v-for="o in 4" :key="o" style="font-size: 14px; margin-bottom: 18px">
+        {{ "列表内容 " + o }}
+      </div>
+    </mist-card>
   </div>
 </template>
 
