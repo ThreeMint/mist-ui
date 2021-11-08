@@ -1,6 +1,6 @@
-import MistTabs from './src/tabs';
+import MistTabs from './src/tabs.vue';
 
-MistTabs.install = function(Vue) {
+MistTabs.install = function (Vue) {
   Vue.component(MistTabs.name, MistTabs);
 };
 

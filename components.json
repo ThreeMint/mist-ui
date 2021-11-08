@@ -1,0 +1,12 @@
+{
+  "button":"./modules/mist-ui/Button/index.js",
+  "badge":"./modules/mist-ui/Badge/index.js",
+  "collapse":"./modules/mist-ui/Collapse/index.js",
+  "collapse-item":"./modules/mist-ui/CollapseItem/index.js",
+  "link":"./modules/mist-ui/Link/index.js",
+  "rate":"./modules/mist-ui/Rate/index.js",
+  "switch":"./modules/mist-ui/Switch/index.js",
+  "tab-pane":"./modules/mist-ui/Tab-pane/index.js",
+  "tabs":"./modules/mist-ui/Tabs/index.js"
+
+}

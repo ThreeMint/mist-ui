@@ -1,4 +1,4 @@
-import MistCollapse from './src/collapse';
+import MistCollapse from './src/collapse.vue';
 
 MistCollapse.install = Vue => Vue.component(MistCollapse.name, MistCollapse);
 

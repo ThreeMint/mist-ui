@@ -1,4 +1,4 @@
-import MistRate from './src/index'
+import MistRate from './src/index.vue'
 
 MistRate.install = Vue => Vue.component(MistRate.name, MistRate);
 

@@ -1,0 +1,17 @@
+{
+  "name": "mist-theme-chalk",
+  "version": "1.0.0",
+  "description": "mist component chalk theme",
+  "main": "lib/index.css",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "author": "Mist Xu",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^5.0.0"
+  }
+}

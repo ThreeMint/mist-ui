@@ -1,4 +1,4 @@
-import MistBadge from './src/index'
+import MistBadge from './src/index.vue'
 
 MistBadge.install = Vue => Vue.component(MistBadge.name, MistBadge);
 

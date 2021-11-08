@@ -1,0 +1,20 @@
+@import './common-var.scss';
+
+.mi-card {
+  border: 1px solid $-color-card-board;
+
+  &.has-shadow {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+  }
+
+  .mi-card__header {
+    padding: 20px 18px;
+    border-bottom: 1px solid $-color-card-board;
+  }
+
+  .mi-card__body {
+    padding: 20px;
+  }
+
+
+}
