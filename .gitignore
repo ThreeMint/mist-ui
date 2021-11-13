@@ -5,3 +5,5 @@ docs
 .npmignore
 LICENSE
 lib
+modules
+*.json
