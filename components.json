@@ -1,6 +1,7 @@
 {
   "button":"./modules/mist-ui/Button/index.js",
   "badge":"./modules/mist-ui/Badge/index.js",
+  "card":"./modules/mist-ui/Card/index.js",
   "collapse":"./modules/mist-ui/Collapse/index.js",
   "collapse-item":"./modules/mist-ui/CollapseItem/index.js",
   "link":"./modules/mist-ui/Link/index.js",
