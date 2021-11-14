@@ -1,6 +1,6 @@
 <template>
   <div class="mi-card" :class="'has-shadow'">
-    <div class="mi-card__header" v-if="$slots.header || header">
+    <div class="mi-card__header" v-if="$slots.header || headerContent">
       <slot name="header">{{ headerContent }}</slot>
     </div>
     <div class="mi-card__body" :style="bodyStyle">

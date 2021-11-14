@@ -54,6 +54,20 @@
         {{ "列表内容 " + o }}
       </div>
     </mist-card>
+
+    <mist-card
+      style="width: 480px"
+      headerContent="这里是标题"
+      :bodyStyle="{ padding: '5px' }"
+    >
+      <div
+        v-for="num in 4"
+        :key="num"
+        style="font-size: 14px; margin-bottom: 18px"
+      >
+        {{ "列表内容 " + num }}
+      </div>
+    </mist-card>
   </div>
 </template>
 
