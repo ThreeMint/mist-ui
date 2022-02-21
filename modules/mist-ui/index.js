@@ -1,4 +1,4 @@
-import MistButton from './Button/index.js';
+import MistButton from './Button/index';
 import MistBadge from './Badge/index';
 import MistCard from './Card/index';
 import MistCollapse from './Collapse/index';
@@ -8,12 +8,9 @@ import MistRate from './Rate/index.js';
 import MistSwitch from './Switch/index.js';
 import MistTabs from './Tabs/index.js';
 import MistTabPane from './Tab-pane/index'
-// 打包为库文件需要引入
-// import './theme-chalk/index.scss'
 
 const MistUI = {};
 
-// element采用的导出方法之一
 const COMPONENTS = [
   MistButton, MistBadge, MistCard,
   MistCollapse, MistCollapseItem,
@@ -41,18 +38,19 @@ MistUI.install = function (Vue, options) {
     });
   }
 }
+const install = MistUI.install
+// export default MistUI;
 
-export default MistUI;
-
-// element采用的导出方法之一
-// 把每个组件的install抽离到单个文件中
-
-// const MistButton = {};
-// MistButton.install = Vue => Vue.component(Button.name, Button);
-export {
-  MistButton, MistBadge, MistCard,
-  MistCollapse, MistCollapseItem,
-  MistLink, MistSwitch,
-  MistTabs, MistTabPane,
+export default {
+  install,
+  MistButton,
+  MistBadge,
+  MistCard,
+  MistCollapse,
+  MistCollapseItem,
+  MistLink,
+  MistSwitch,
+  MistTabs,
+  MistTabPane,
   MistRate
 }

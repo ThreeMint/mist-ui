@@ -1,6 +1,10 @@
 const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
+const {
+  VueLoaderPlugin
+} = require('vue-loader');
 const WebpackBar = require('webpackbar');
+
+const config = require('./build/config');
 
 module.exports = {
   mode: 'production',
@@ -14,18 +18,20 @@ module.exports = {
     library: 'MISTUI',
     libraryTarget: 'umd',
   },
+  resolve: {
+    extensions: ['.js', '.vue', '.json'],
+    alias: config.alias
+  },
   module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          compilerOptions: {
-            preserveWhitespace: false
-          }
+    rules: [{
+      test: /\.vue$/,
+      loader: 'vue-loader',
+      options: {
+        compilerOptions: {
+          preserveWhitespace: false
         }
-      },
-    ]
+      }
+    }, ]
   },
   plugins: [
     new WebpackBar(),

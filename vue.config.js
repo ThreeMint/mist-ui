@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   productionSourceMap: false,
   css: {
@@ -12,4 +14,8 @@ module.exports = {
       }
     },
   },
+  chainWebpack: config => {
+    config.resolve.alias
+      .set('mist-ui', path.resolve(process.cwd(), './'));
+  }
 }

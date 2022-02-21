@@ -1,18 +1,14 @@
 @import './common-var.scss';
 
 .mi-collapse {
-  border-top: 1px solid $-color-grey-light-1;
-  border-bottom: 1px solid $-color-grey-light-1;
+  border-top: 1px solid $-color-grey-light-2;
+  border-bottom: 1px solid $-color-grey-light-2;
 
   .mi-collapse-item {
     overflow: hidden;
 
     &:last-child {
       margin-bottom: -1px;
-
-      .mi-collapse_header {
-        border-bottom-color: transparent;
-      }
     }
   }
 
@@ -21,7 +17,7 @@
     align-items: center;
     position: relative;
     padding: 10px;
-    border-bottom: 1px solid $-color-grey-light-1;
+    border-bottom: 1px solid $-color-grey-light-2;
     cursor: pointer;
     align-items: center;
     outline: none;
@@ -32,9 +28,18 @@
     }
   }
 
+  .mi-collapse-item__wrap {
+    background-color: #fff;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-bottom: 1px solid $-color-grey-light-2;
+  }
+
   .mi-collapse_content {
-    padding: 0 10px 10px 10px;
-    border-bottom: 1px solid $-color-grey-light-1;
+    padding-bottom: 25px;
+    font-size: 13px;
+    color: $-color-black-light;
+    line-height: 1.7;
   }
 
   .mi-collapse__icon {
@@ -49,7 +54,6 @@
     font-size: 0;
     border: 5px solid transparent;
     border-left-color: $-color-grey-light-1;
-
     transition: transform 0.3s linear;
 
     &.is-active {
@@ -57,20 +61,7 @@
     }
   }
 
-  .mifade-enter-active,
-  .mifade-leave-active {
-    transition: opacity 0.3s, height 0.3s, padding-top 0.5s, padding-bottom 0.5s;
-  }
-
-  .mifade-enter {
-    opacity: 0;
-  }
-
-  .mifade-leave-to {
-    opacity: 0;
-    height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    border-bottom-color: transparent;
+  .mifade {
+    transition: .3s height ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
 }

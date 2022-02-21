@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <!-- <mist-button type="default">默认按钮</mist-button>
+    <mist-button type="success">默认按钮</mist-button>
+    <mist-button type="warning">默认按钮</mist-button>
+    <mist-button type="danger">默认按钮</mist-button>
+    <mist-button type="primary">默认按钮</mist-button> -->
+
     <mist-collapse
       style="width: 500px"
       @change="handleChange"
@@ -51,7 +57,7 @@
         <mist-button type="default" size="mini">按钮</mist-button>
       </template>
       <div v-for="o in 4" :key="o" style="font-size: 14px; margin-bottom: 18px">
-        {{ "列表内容 " + o }}
+        {{ '列表内容 ' + o }}
       </div>
     </mist-card>
 
@@ -65,7 +71,7 @@
         :key="num"
         style="font-size: 14px; margin-bottom: 18px"
       >
-        {{ "列表内容 " + num }}
+        {{ '列表内容 ' + num }}
       </div>
     </mist-card>
   </div>
@@ -73,7 +79,7 @@
 
 <script>
 export default {
-  name: "App",
+  name: 'App',
   data() {
     return {
       //button
@@ -81,27 +87,28 @@ export default {
       //switch
       outValue: true,
       // tabs
-      currentName: "first",
-      collapseValue: "button 按钮",
+      currentName: 'first',
+      //collapse
+      collapseValue: '',
 
       //rate
       rateVlaue: 3,
       rateVlaue2: 2,
-    };
+    }
   },
   methods: {
     tabsHandle(val) {
-      console.log(val);
+      console.log(val)
     },
     switchClick(val) {
-      console.log(val);
+      console.log(val)
     },
     handleChange(val) {
-      console.log("使用时触发，", val);
-      console.log("v-model,", this.collapseValue);
+      console.log('使用时触发，', val)
+      console.log('v-model,', this.collapseValue)
     },
   },
-};
+}
 </script>
 
 <style lang="scss">
