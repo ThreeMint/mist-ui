@@ -1,5 +1,4 @@
-//需要使用babel编译，到lib文件夹下，暂时未做该功能
-
+//需要使用babel编译，到lib文件夹下，
 
 /* istanbul ignore next */
 const trim = function (string) {

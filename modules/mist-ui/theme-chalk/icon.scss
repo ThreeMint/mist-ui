@@ -1,7 +1,10 @@
 @font-face {
   font-family: "mist-icons";
   /* Project id  */
-  src: url('fonts/iconfont.ttf') format('truetype');
+
+  src: url('fonts/iconfont.woff2?t=1646972591950') format('woff2'),
+    url('fonts/iconfont.woff?t=1646972591950') format('woff'),
+    url('fonts/iconfont.ttf') format('truetype');
 }
 
 [class^="mi-icon-"],
@@ -16,6 +19,10 @@
   display: inline-block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.mi-icon-quxiao:before {
+  content: "\e621";
 }
 
 .mi-icon-star:before {

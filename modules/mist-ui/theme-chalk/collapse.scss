@@ -1,8 +1,8 @@
 @import './common-var.scss';
 
 .mi-collapse {
-  border-top: 1px solid $-color-grey-light-2;
-  border-bottom: 1px solid $-color-grey-light-2;
+  border-top: 1px solid $-color-grey-light-3;
+  border-bottom: 1px solid $-color-grey-light-3;
 
   .mi-collapse-item {
     overflow: hidden;
@@ -17,7 +17,7 @@
     align-items: center;
     position: relative;
     padding: 10px;
-    border-bottom: 1px solid $-color-grey-light-2;
+    border-bottom: 1px solid $-color-grey-light-3;
     cursor: pointer;
     align-items: center;
     outline: none;
@@ -32,7 +32,7 @@
     background-color: #fff;
     overflow: hidden;
     box-sizing: border-box;
-    border-bottom: 1px solid $-color-grey-light-2;
+    border-bottom: 1px solid $-color-grey-light-3;
   }
 
   .mi-collapse_content {
