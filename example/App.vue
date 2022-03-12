@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <mist-button type="success" @click="showMessage">弹出Message</mist-button>
+
     <mist-collapse
       style="width: 500px"
       @change="handleChange"
       v-model="collapseValue"
     >
       <mist-collapse-item title="button 按钮">
+        <i class="mi-icon-quxiao"></i>
         <mist-button type="default">默认按钮</mist-button>
         <mist-button type="success">默认按钮</mist-button>
         <mist-button type="warning">默认按钮</mist-button>
         <mist-button type="danger">默认按钮</mist-button>
-        <mist-button type="primary">默认按钮</mist-button>
+        <mist-button type="primary">primary按钮</mist-button>
       </mist-collapse-item>
 
       <mist-collapse-item title="Link 链接">
@@ -103,8 +105,19 @@ export default {
       console.log('v-model,', this.collapseValue)
     },
     showMessage() {
-      this.$message('显示消息哦！！！')
+      // this.$message({
+      //   message: '显示消息哦！！！',
+      //   type: 'info',
+      //   offset: 5,
+      //   showClose: true,
+      //   duration: 3000,
+      // })
+
+      this.$message('显示消息哦！！！456')
     },
+  },
+  mounted() {
+    // console.log(this)
   },
 }
 </script>
