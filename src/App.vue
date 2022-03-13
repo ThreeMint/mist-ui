@@ -25,25 +25,10 @@
     </mist-collapse>
     <br />
 
-    <mist-badge value="10">
-      <mist-button>按钮</mist-button>
-    </mist-badge>
-    <br />
-
     <mi-tabs v-model="currentName" class="tabs" @change="tabsHandle">
       <mi-tab-pane label="选项一" name="first">选项一2</mi-tab-pane>
       <mi-tab-pane label="选项二" name="two">选项二33</mi-tab-pane>
     </mi-tabs>
-    <br />
-
-    <mist-rate v-model="rateVlaue" :max="10"></mist-rate>
-    <mist-rate
-      v-model="rateVlaue2"
-      disabled
-      show-score
-      score-template="值为：{value}"
-      score-color="#0fb5d0"
-    ></mist-rate>
     <br />
 
     <mist-card style="width: 480px">
@@ -53,20 +38,6 @@
       </template>
       <div v-for="o in 4" :key="o" style="font-size: 14px; margin-bottom: 18px">
         {{ '列表内容 ' + o }}
-      </div>
-    </mist-card>
-
-    <mist-card
-      style="width: 480px"
-      headerContent="这里是标题"
-      :bodyStyle="{ padding: '5px' }"
-    >
-      <div
-        v-for="num in 4"
-        :key="num"
-        style="font-size: 14px; margin-bottom: 18px"
-      >
-        {{ '列表内容 ' + num }}
       </div>
     </mist-card>
   </div>
