@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router'
 // import App from './App.vue'
 import App from '../example/App.vue'
 //样式
@@ -20,8 +21,23 @@ Vue.use(MistUI);
 // import '../modules/mist-ui/theme-chalk/lib/button.css'
 // Vue.use(MistButton)
 
+Vue.use(VueRouter);
+
+// 解决重复点击路由，跳转报错
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
+const router = new VueRouter({
+  mode: 'hash',
+  base: __dirname,
+})
+
+
 Vue.config.productionTip = false
 
 new Vue({
   render: h => h(App),
+  router
 }).$mount('#app')

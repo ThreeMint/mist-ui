@@ -1,0 +1,66 @@
+@import './common-var.scss';
+
+.mi-breadcrumb {
+  color: $--breadcrumb-font-color;
+  font-size: $--breadcrumb-font-size;
+  line-height: 1;
+
+  .mi-breadcrumb__item {
+    float: left;
+
+    .mi-breadcrumb__inner {
+
+      &.is-link,
+      & a {
+        color: $--color-text-primary;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color .2s linear;
+
+        &:hover {
+          color: $-color-primary;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .mi-breadcrumb__separator {
+      margin: 0 9px;
+      color: $--color-text-placeholder;
+      font-weight: bold;
+
+      &[class*=icon] {
+        margin: 0 6px;
+        font-weight: normal;
+      }
+    }
+
+
+    &:last-child {
+
+      .mi-breadcrumb__inner,
+      .mi-breadcrumb__inner a {
+
+        &,
+        &:hover {
+          font-weight: normal;
+          cursor: text;
+        }
+      }
+
+      .mi-breadcrumb__separator {
+        display: none;
+      }
+    }
+  }
+
+  &::before,
+  &::after {
+    display: table;
+    content: '';
+  }
+
+  &::after {
+    clear: both;
+  }
+}

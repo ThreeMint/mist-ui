@@ -1,5 +1,7 @@
 import MistButton from './Button/index';
 import MistBadge from './Badge/index';
+import MistBreadcrumb from './breadcrumb/index';
+import MistBreadcrumbItem from './breadcrumb-item/index';
 import MistCard from './Card/index';
 import MistCollapse from './Collapse/index';
 import MistCollapseItem from './CollapseItem/index';
@@ -13,7 +15,10 @@ import MistMessage from './Message/index.js';
 const MistUI = {};
 
 const COMPONENTS = [
-  MistButton, MistBadge, MistCard,
+  MistButton, MistBadge,
+  MistBreadcrumb,
+  MistBreadcrumbItem,
+  MistCard,
   MistCollapse, MistCollapseItem,
   MistLink, MistSwitch,
   MistTabs, MistTabPane,
@@ -49,6 +54,8 @@ export default {
   install,
   MistButton,
   MistBadge,
+  MistBreadcrumb,
+  MistBreadcrumbItem,
   MistCard,
   MistCollapse,
   MistCollapseItem,

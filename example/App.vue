@@ -58,19 +58,19 @@
       </div>
     </mist-card>
 
-    <mist-card
-      style="width: 480px"
-      headerContent="这里是标题"
-      :bodyStyle="{ padding: '5px' }"
-    >
-      <div
-        v-for="num in 4"
-        :key="num"
-        style="font-size: 14px; margin-bottom: 18px"
+    <mist-breadcrumb separator="/">
+      <mist-breadcrumb-item :to="{ path: '/' }">是</mist-breadcrumb-item>
+      <mist-breadcrumb-item>啊啊</mist-breadcrumb-item>
+      <mist-breadcrumb-item>阿松大</mist-breadcrumb-item>
+    </mist-breadcrumb>
+
+    <mist-breadcrumb separatorClass="mi-icon-star">
+      <mist-breadcrumb-item :to="{ path: '/' }">首页</mist-breadcrumb-item>
+      <mist-breadcrumb-item
+        ><a href="https://bilibili.com">图标展示</a></mist-breadcrumb-item
       >
-        {{ '列表内容 ' + num }}
-      </div>
-    </mist-card>
+      <mist-breadcrumb-item>详情1</mist-breadcrumb-item>
+    </mist-breadcrumb>
   </div>
 </template>
 

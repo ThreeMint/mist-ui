@@ -16,6 +16,7 @@ $-color-grey-dark-5: darken($-color-grey, 50%);
 
 $-color-black: #000000 !default;
 $-color-black-light: mix($-color-white, $-color-black, 50%) !default;
+$-color-black-light-5: mix($-color-white, $-color-black, 50%) !default;
 
 $-color-blue: #3ea4e7 !default;
 $-color-blue-light-1: mix($-color-white, $-color-blue, 10%) !default;
@@ -59,11 +60,19 @@ $-color-danger-lighter-6: mix($-color-white, $-color-danger, 60%) !default;
 $-color-danger-lighter-7: mix($-color-white, $-color-danger, 70%) !default;
 $-color-danger-lighter-8: mix($-color-white, $-color-danger, 80%) !default;
 
+//text font #303133
+$--color-text-primary: $-color-black !default;
+$--color-text-placeholder: $-color-grey-light-2 !default;
+
 // background
 $-color-background: #c6c6c6;
 
+// breadcrumb
+$--breadcrumb-font-color: $-color-black-light-5 !default;
+$--breadcrumb-font-size: 14px !default;
+
 //Card
-$-color-card-board: #ebeef5;
+$-color-card-board: #ebeef5 !default;
 
 // Rate
 $-color-rate-low: #f5b326;
@@ -74,11 +83,8 @@ $--rate-height: 20px !default;
 
 //message
 $--message-font-color: $-color-black-light !default;
-
 $--message-success-font-color: $-color-success !default;
-
 $--message-warning-font-color: $-color-warning !default;
-
 $--message-error-font-color: $-color-danger !default;
 
 $--message-close-icon-color:$-color-grey-light-2 !default;
