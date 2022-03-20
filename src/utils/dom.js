@@ -1,3 +1,5 @@
+//需要使用babel编译，到lib文件夹下，
+
 /* istanbul ignore next */
 const trim = function (string) {
   return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');

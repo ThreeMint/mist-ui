@@ -11,6 +11,7 @@ Object.defineProperty(PopupManager, 'zIndex', {
   configurable: true,
   get() {
     if (!hasInitZIndex) {
+      //需要初始化
       zIndex = zIndex || 2000;
       hasInitZIndex = true;
     }
