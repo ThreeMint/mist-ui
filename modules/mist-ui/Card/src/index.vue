@@ -13,7 +13,10 @@
 export default {
   name: "MistCard",
   props: {
-    headerContent: {},
+    headerContent: {
+      type: String,
+      default: "",
+    },
     bodyStyle: {},
   },
 };

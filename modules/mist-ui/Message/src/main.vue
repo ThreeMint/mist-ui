@@ -26,8 +26,8 @@
 export default {
   data() {
     return {
-      type: 'info',
-      message: '',
+      type: "info",
+      message: "",
       visible: false,
       verticalOffset: 20,
       duration: 3000,
@@ -35,48 +35,51 @@ export default {
       onClose: null,
       closed: false,
       showClose: false,
-    }
+    };
   },
   computed: {
     positionTop() {
       return {
         top: `${this.verticalOffset}px`,
-      }
+      };
     },
   },
   watch: {
     closed(val) {
       if (val) {
-        this.visible = false
+        this.visible = false;
       }
     },
   },
   methods: {
     close() {
-      this.closed = true
-      if (typeof this.onClose === 'function') {
-        this.onClose()
+      this.closed = true;
+      if (typeof this.onClose === "function") {
+        this.onClose(); //this未传
       }
     },
     startTimer() {
       if (this.duration > 0) {
         this.timer = setTimeout(() => {
+          //close,关闭回调待定，传参this
           if (!this.closed) {
-            this.close()
+            this.close();
           }
-        }, this.duration)
+        }, this.duration);
       }
     },
     clearTimer() {
-      clearTimeout(this.timer)
+      clearTimeout(this.timer);
     },
     handleAfterLeave() {
-      this.$destroy(this)
-      this.$el.parentNode.removeChild(this.$el)
+      this.$destroy(this);
+      this.$el.parentNode.removeChild(this.$el);
     },
   },
   mounted() {
-    this.startTimer()
+    this.startTimer();
   },
-}
+};
 </script>
+
+<style></style>

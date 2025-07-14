@@ -5,6 +5,7 @@ lib
 dist
 package-lock.json
 .npmignore
+.pnpm/
 
 # local env files
 .env.local

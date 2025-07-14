@@ -37,7 +37,7 @@
         <mist-button type="default" size="mini">按钮</mist-button>
       </template>
       <div v-for="o in 4" :key="o" style="font-size: 14px; margin-bottom: 18px">
-        {{ '列表内容 ' + o }}
+        {{ "列表内容 " + o }}
       </div>
     </mist-card>
   </div>
@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       //button
@@ -53,31 +53,31 @@ export default {
       //switch
       outValue: true,
       // tabs
-      currentName: 'first',
+      currentName: "first",
       //collapse
-      collapseValue: '',
+      collapseValue: "",
 
       //rate
       rateVlaue: 3,
       rateVlaue2: 2,
-    }
+    };
   },
   methods: {
     tabsHandle(val) {
-      console.log(val)
+      console.log(val);
     },
     switchClick(val) {
-      console.log(val)
+      console.log(val);
     },
     handleChange(val) {
-      console.log('使用时触发，', val)
-      console.log('v-model,', this.collapseValue)
+      console.log("使用时触发，", val);
+      console.log("v-model,", this.collapseValue);
     },
     showMessage() {
-      this.$message('显示消息哦！！！')
+      this.$message("显示消息哦！！！");
     },
   },
-}
+};
 </script>
 
 <style lang="scss">

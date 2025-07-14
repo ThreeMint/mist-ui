@@ -54,7 +54,13 @@
         <mist-button type="default" size="mini">按钮</mist-button>
       </template>
       <div v-for="o in 4" :key="o" style="font-size: 14px; margin-bottom: 18px">
-        {{ '列表内容 ' + o }}
+        {{ "列表内容 " + o }}
+      </div>
+    </mist-card>
+
+    <mist-card style="width: 480px" headerContent="字符串标题">
+      <div v-for="o in 4" :key="o" style="font-size: 14px; margin-bottom: 18px">
+        {{ "列表内容 " + o }}
       </div>
     </mist-card>
 
@@ -76,7 +82,7 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       //button
@@ -84,25 +90,25 @@ export default {
       //switch
       outValue: true,
       // tabs
-      currentName: 'first',
+      currentName: "first",
       //collapse
-      collapseValue: '',
+      collapseValue: "",
 
       //rate
       rateVlaue: 3,
       rateVlaue2: 2,
-    }
+    };
   },
   methods: {
     tabsHandle(val) {
-      console.log(val)
+      console.log(val);
     },
     switchClick(val) {
-      console.log(val)
+      console.log(val);
     },
     handleChange(val) {
-      console.log('使用时触发，', val)
-      console.log('v-model,', this.collapseValue)
+      console.log("使用时触发，", val);
+      console.log("v-model,", this.collapseValue);
     },
     showMessage() {
       // this.$message({
@@ -113,13 +119,16 @@ export default {
       //   duration: 3000,
       // })
 
-      this.$message('显示消息哦！！！456')
+      this.$message("显示消息哦！！！456");
+
+      // let a = this.$message("显示消息哦！！！456");
+      // console.log(a);
     },
   },
   mounted() {
     // console.log(this)
   },
-}
+};
 </script>
 
 <style lang="scss">

@@ -60,13 +60,10 @@ $-color-danger-lighter-6: mix($-color-white, $-color-danger, 60%) !default;
 $-color-danger-lighter-7: mix($-color-white, $-color-danger, 70%) !default;
 $-color-danger-lighter-8: mix($-color-white, $-color-danger, 80%) !default;
 
-<<<<<<< HEAD
-=======
 //text font #303133
 $--color-text-primary: $-color-black !default;
 $--color-text-placeholder: $-color-grey-light-2 !default;
 
->>>>>>> dev
 // background
 $-color-background: #c6c6c6;
 
@@ -86,16 +83,8 @@ $--rate-height: 20px !default;
 
 //message
 $--message-font-color: $-color-black-light !default;
-<<<<<<< HEAD
-
-$--message-success-font-color: $-color-success !default;
-
-$--message-warning-font-color: $-color-warning !default;
-
-=======
 $--message-success-font-color: $-color-success !default;
 $--message-warning-font-color: $-color-warning !default;
->>>>>>> dev
 $--message-error-font-color: $-color-danger !default;
 
 $--message-close-icon-color:$-color-grey-light-2 !default;

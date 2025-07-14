@@ -14,7 +14,6 @@
   </div>
 </template>
 
-
 <script>
 import MiTabNav from "./tabNav.vue";
 
